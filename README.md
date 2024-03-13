@@ -81,7 +81,7 @@ cd p2fwk-work
 
     #For the Jet setup
     ipbb add git https://:@gitlab.cern.ch:8443/rufl/RuflCore.git -r d3ddf86f
-    ipbb add git https://:@gitlab.cern.ch:8443/cms-cactus/phase2/firmware/correlator-common.git
+    ipbb add git https://:@gitlab.cern.ch:8443/cms-cactus/phase2/firmware/correlator-common.git -b master-133x
     ipbb add git https://:@gitlab.cern.ch:8443/cms-cactus/phase2/firmware/correlator-layer2.git
     ```
 
@@ -113,6 +113,8 @@ cd p2fwk-work
 - These require older version of Vivado
     ```
     source /tools/Xilinx/Vivado/2019.1/settings64.sh
+    # Correlator2
+    source /opt/local/Xilinx/Vivado/2019.2/settings64.sh
     ```
 - Compile
     ```
@@ -151,6 +153,8 @@ cd p2fwk-work
     ```
     source ipbb-dev-2022f/env.sh
     source /tools/Xilinx/Vivado/2022.1/settings64.sh
+    #Correlator2
+    source /opt/local/Xilinx/Vivado/2022.2/settings64.sh
     
     # Required for `uhal`
     export LD_LIBRARY_PATH=/opt/cactus/lib:$LD_LIBRARY_PATH 
