@@ -145,7 +145,7 @@ cd p2fwk-work
 - Run the Vivado license managere `vlm` GUI (requires X11)
 - Load license file
 
-## Running stuff
+## Building bitfile and running simulation
 - (Assume a fresh login) 
   - And a `(base)` conda env existing
   - `py27` env seems to not be necessary (FIXME)
