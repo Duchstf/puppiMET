@@ -190,4 +190,43 @@ ipbb vivado package
 
 ### Running the jet simulation
 
+1. Download all the dumpfiles from [here](https://cactus.web.cern.ch/cactus/phase2/firmware/correlator-common/tags/1.5.10/dumpfiles/) to the `dumpfiles` directory in `correlator-common`. 
 
+2. Suppose you are in `p2fwk-work` directory. Run the simulation:
+
+```
+cd src/correlator-common/jetmet/seededcone
+vivado_hls -f run_Sim.tcl "{nevents=1000 write=1 debug=0}"
+cd ../../../../
+```
+
+By this point you should have been able to produce the `ParticlesIn.txt` in `p2fwk-work/src/correlator-common/jetmet/seededcone/JetSim/solution/csim/build/ParticlesIn.txt` directory. This will be the main input file that we use later on in the simulation test.
+
+```
+ipbb proj create vivado seededcone-test correlator-common:jetmet/seededcone/testbench tb.dep
+```
+
+```
+cp src/correlator-common/jetmet/seededcone/JetSim/solution/csim/build/ParticlesIn.txt proj/seededcone-test
+```
+
+```
+cd proj/seededcone-test
+```
+
+```
+ipbb vivado generate-project
+```
+
+then, there are two ways to run the simulation:
+
+1. **Using GUI:** Open vivado with `vivado`, click `run behaviorial simulation`. Note that if this is your first time running the simulation, it might fail looking for the `ParticlesIn.txt` input file. You have to copy `ParticlesIn.txt` into the `xsim` directory in order for it to run properly.
+
+2. **Using TCL Commands:** 
+
+- `vivado -mode tcl`
+- `open_project <your vivado project here>.xpr`
+- (if first time running) `set_property top top [get_filesets sim_1]`
+- `launch_simulation` (if this is your first time runnung the simulation, it might fail looking for the input file. You need to copy `ParticlesIn.txt` into `.sim/something/xsim` directory, and then all the output files should be in the same directory.)
+- `run 5 us` (or however much you want)
+- `close_sim`
