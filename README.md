@@ -164,7 +164,9 @@ cd p2fwk-work
     cd p2fwk-work/
     ```
     
-### A pass-through test
+### A pass-through test with building the null algorithm
+
+* In this part you will build a pass_through algorithm (it doesn't do anything for the inputs you put in and just outputs the same thing) for the VU9P boards. 
 
 ```
 # Create env 
@@ -184,5 +186,8 @@ ipbb vivado package
 ```
 - `null_algo` being tested [link](https://gitlab.cern.ch/p2-xware/firmware/emp-fwk/-/blob/v0.7.4/projects/examples/serenity/dc_vu9p/firmware/cfg/so2/top.dep?ref_type=tags)
 - Is simulation the same as here? https://serenity.web.cern.ch/serenity/emp-fwk/firmware/instructions.html#step-3-build-firmware-or-run-simulation
-- `package` step produces output files that can be tested on hardware, namely `.bit` and a zipped file    
+- `package` step produces output files that can be tested on hardware, namely `.bit` and a zipped file
+
+### Running the jet simulation
+
 
