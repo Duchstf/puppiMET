@@ -171,10 +171,13 @@ cd p2fwk-work
 ```
 # Create env 
 ipbb proj create vivado test_null emp-fwk:projects/examples/serenity/dc_vu9p so2/top.dep
-proj/test_null/
+cd proj/test_null/
 
 # Run simulation
 ipbb vivado generate-project --enable-ip-cache -1
+
+# Vivado GUI (Still there's some errors about GTHE, GTHY)
+Make sure the Hierarchy Update as 'Automatic Update and Compile Order'
 
 # Run firmware
 ipbb ipbus gendecoders
