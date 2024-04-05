@@ -55,6 +55,8 @@ Puppi MET setup in correlator layer 2.
 
 ### Install emp-fwk
 
+This ipbb bus software depends on the version of `emp-fwk` you are using, please check the readme of the `emp-fwk` for the lastest versions. 
+
 ```
 curl -L https://github.com/ipbus/ipbb/archive/dev/2022f.tar.gz | tar xvz
 source ipbb-dev-2022f/env.sh
