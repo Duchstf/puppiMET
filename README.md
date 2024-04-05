@@ -84,6 +84,7 @@ cd p2fwk-work
     ipbb add git https://:@gitlab.cern.ch:8443/cms-cactus/phase2/firmware/correlator-common.git -b master-140x
     ipbb add git https://:@gitlab.cern.ch:8443/cms-cactus/phase2/firmware/correlator-layer2.git
     ```
+- Or alternatively, you could also `git clone` (`ipbb git add` does the same thing as git clone)
 
 #### Build dependencies
 - Setup CMSSW
