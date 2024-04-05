@@ -71,7 +71,7 @@ cd p2fwk-work
 - Install via kerberos, run `kinit username@CERN.CH`
 
     ```
-    ipbb add git https://:@gitlab.cern.ch:8443/p2-xware/firmware/emp-fwk.git -r v0.7.4
+    ipbb add git https://:@gitlab.cern.ch:8443/p2-xware/firmware/emp-fwk.git -r v0.8.1
     ipbb add git https://gitlab.cern.ch/ttc/legacy_ttc.git -b v2.1
     ipbb add git https://:@gitlab.cern.ch:8443/cms-tcds/cms-tcds2-firmware.git -b v0_1_1
     ipbb add git https://gitlab.cern.ch/HPTD/tclink.git -r fda0bcf
@@ -81,7 +81,7 @@ cd p2fwk-work
 
     #For the Jet setup
     ipbb add git https://:@gitlab.cern.ch:8443/rufl/RuflCore.git -r d3ddf86f
-    ipbb add git https://:@gitlab.cern.ch:8443/cms-cactus/phase2/firmware/correlator-common.git -b master-133x
+    ipbb add git https://:@gitlab.cern.ch:8443/cms-cactus/phase2/firmware/correlator-common.git -b master-140x
     ipbb add git https://:@gitlab.cern.ch:8443/cms-cactus/phase2/firmware/correlator-layer2.git
     ```
 
